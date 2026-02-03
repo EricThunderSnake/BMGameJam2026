@@ -1,16 +1,16 @@
 [gd_scene format=4 uid="uid://dwue0at0lqvfl"]
 
-[ext_resource type="Script" uid="uid://mxqjmqohnqny" path="res://Level.gd" id="1_d1jbf"]
-[ext_resource type="Texture2D" uid="uid://buhddnowo1dr5" path="res://icon.svg" id="2_hi2wx"]
-[ext_resource type="PackedScene" uid="uid://bjj4j0c3ilp1m" path="res://unit.tscn" id="3_1xjbt"]
-[ext_resource type="Script" uid="uid://dqem3akv0o118" path="res://UnitManager.gd" id="3_vy3yb"]
-[ext_resource type="Script" uid="uid://cskxoh4fn2de6" path="res://Fighter.gd" id="4_vy3yb"]
-[ext_resource type="Script" uid="uid://b2pwklp1y0x63" path="res://Barbarian.gd" id="5_hi2wx"]
+[ext_resource type="Script" uid="uid://mxqjmqohnqny" path="res://Levels/Level.gd" id="1_pjihm"]
+[ext_resource type="Texture2D" uid="uid://buhddnowo1dr5" path="res://icon.svg" id="2_oakcl"]
+[ext_resource type="Script" uid="uid://dqem3akv0o118" path="res://Units/Manager/UnitManager.gd" id="3_qi1fe"]
+[ext_resource type="PackedScene" uid="uid://bjj4j0c3ilp1m" path="res://Units/unit.tscn" id="4_uo8oc"]
+[ext_resource type="Script" uid="uid://cskxoh4fn2de6" path="res://Units/ClassScripts/Fighter.gd" id="5_ik8vs"]
+[ext_resource type="Script" uid="uid://b2pwklp1y0x63" path="res://Units/ClassScripts/Barbarian.gd" id="6_gn367"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_gyfs4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5x1h"]
-texture = ExtResource("2_hi2wx")
+texture = ExtResource("2_oakcl")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -95,7 +95,7 @@ sources/0 = SubResource("TileSetScenesCollectionSource_gyfs4")
 sources/1 = SubResource("TileSetAtlasSource_d5x1h")
 
 [node name="Level 1" type="Node2D" unique_id=1713846306]
-script = ExtResource("1_d1jbf")
+script = ExtResource("1_pjihm")
 
 [node name="Map" type="Node2D" parent="." unique_id=2051802735]
 visible = false
@@ -105,12 +105,12 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAI
 tile_set = SubResource("TileSet_8mm7a")
 
 [node name="UnitManager" type="Node2D" parent="." unique_id=857751747]
-script = ExtResource("3_vy3yb")
+script = ExtResource("3_qi1fe")
 
-[node name="Fighter" parent="UnitManager" unique_id=1947086417 instance=ExtResource("3_1xjbt")]
-script = ExtResource("4_vy3yb")
+[node name="Fighter" parent="UnitManager" unique_id=1947086417 instance=ExtResource("4_uo8oc")]
+script = ExtResource("5_ik8vs")
 controller = 1
 
-[node name="Barbarian" parent="UnitManager" unique_id=958403161 instance=ExtResource("3_1xjbt")]
-script = ExtResource("5_hi2wx")
+[node name="Barbarian" parent="UnitManager" unique_id=958403161 instance=ExtResource("4_uo8oc")]
+script = ExtResource("6_gn367")
 controller = 1
