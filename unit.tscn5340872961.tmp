@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bjj4j0c3ilp1m"]
+
+[ext_resource type="Script" uid="uid://bellhuss6aeh7" path="res://Unit.gd" id="1_btf8p"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_btf8p"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ctwoc"]
+width = 128
+height = 128
+noise = SubResource("FastNoiseLite_btf8p")
+
+[node name="Unit" type="Node2D" unique_id=1947086417]
+script = ExtResource("1_btf8p")
+_name = null
+_position = null
+_health = null
+_attack = null
+_armor_class = null
+controller = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2072597302]
+texture = SubResource("NoiseTexture2D_ctwoc")
+offset = Vector2(64, 64)
