@@ -24,7 +24,11 @@ func _init():
 
 func TakeTurn():
 	if controller == Controller.PLAYER:
-		print(controller)
+		print(controller) # currently, the game is printing 1, so
+		# we are entering this branch, but the game does not wait
+		# for a player_ready signal to be emitted
+		# As of yet, there is nowhere in the code where player_ready
+		# is called. This means I misunderstand signals
 		await player_ready
 	else:
 		pass
