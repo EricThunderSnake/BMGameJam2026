@@ -11,6 +11,13 @@ noise = SubResource("FastNoiseLite_btf8p")
 
 [node name="Unit" type="Node2D" unique_id=1947086417]
 script = ExtResource("1_btf8p")
+_name = null
+_position = null
+_class = null
+_health = null
+_attack = null
+_armor_class = null
+controller = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2072597302]
 texture = SubResource("NoiseTexture2D_ctwoc")

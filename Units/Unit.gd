@@ -1,13 +1,13 @@
 class_name Unit
 extends Node2D
 
-signal player_ready
-
-var player_turn = true
+signal turn_started
+signal turn_finished
 
 @export var _name: String = "NoName"
 @export var _position: Vector2i =  Vector2i(0,0)
-static var _class: String = "Unit"
+enum Class {UNIT, BARBARIAN, FIGHTER}
+var _class: Class = Class.UNIT
 @export var _health: int = 10
 @export var _attack: int = 5
 @export var _armor_class: int = 3
@@ -22,16 +22,23 @@ func _init():
 	pass	
 	_health = 5 #experiment
 
+func _ready():
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	turn_started.connect(TakeTurn)
+
 func TakeTurn():
 	if controller == Controller.PLAYER:
-		print(controller) # currently, the game is printing 1, so
+		print(_name)
+		get_tree().paused = true
+		#get_tree().paused = false # currently, the game is printing 1, so
 		# we are entering this branch, but the game does not wait
 		# for a player_ready signal to be emitted
 		# As of yet, there is nowhere in the code where player_ready
 		# is called. This means I misunderstand signals
-		await player_ready
 	else:
 		pass
 
 func _input(event):
-	pass
+	if event.is_action_released("ui_accept"):
+		print("hello")
+		position.x += sprite.texture.get_width()
