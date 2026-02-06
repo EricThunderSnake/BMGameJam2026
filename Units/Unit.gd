@@ -24,21 +24,3 @@ func _init():
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
-	turn_started.connect(TakeTurn)
-
-func TakeTurn():
-	if controller == Controller.PLAYER:
-		print(_name)
-		get_tree().paused = true
-		#get_tree().paused = false # currently, the game is printing 1, so
-		# we are entering this branch, but the game does not wait
-		# for a player_ready signal to be emitted
-		# As of yet, there is nowhere in the code where player_ready
-		# is called. This means I misunderstand signals
-	else:
-		pass
-
-func _input(event):
-	if event.is_action_released("ui_accept"):
-		print("hello")
-		position.x += sprite.texture.get_width()

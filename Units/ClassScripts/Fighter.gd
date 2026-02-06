@@ -13,7 +13,3 @@ func _init():
 func _ready():
 	super()
 	_class = Class.FIGHTER
-
-func TakeTurn():
-	super()
-	#print("Taking backshots for the team")

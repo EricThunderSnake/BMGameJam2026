@@ -1,5 +1,7 @@
 extends Node2D
 
+signal turn_started(unit: Unit)
+@onready var TurnManager = $"../TurnManager"
 var units: Array[Unit] = []
 
 func _ready():
@@ -8,9 +10,9 @@ func _ready():
 		if unit is not Unit:
 			continue
 		units.append(unit)
-			
 func _process(delta: float) -> void:
 	for unit in units:
-		unit.turn_started.emit()
-		await unit.turn_finished
+		print(unit.name)
+		turn_started.emit(unit)
+		await TurnManager.turn_ended
 		print("hhmmmmmm")

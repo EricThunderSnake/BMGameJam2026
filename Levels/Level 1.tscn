@@ -582,5 +582,5 @@ _attack = 5
 _armor_class = 3
 controller = 1
 
-[node name="Pointer" parent="." unique_id=206241 instance=ExtResource("9_uo8oc")]
+[node name="TurnManager" parent="." unique_id=206241 instance=ExtResource("9_uo8oc")]
 script = ExtResource("10_ik8vs")

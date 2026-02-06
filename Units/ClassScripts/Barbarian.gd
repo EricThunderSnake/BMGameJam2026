@@ -12,8 +12,3 @@ func _init():
 func _ready():
 	super()
 	_class = Class.BARBARIAN
-
-func TakeTurn():
-	#print("Ready to bust")
-	super()
-	#print("Backshot in the head")
