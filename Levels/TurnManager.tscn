@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://blxoxdblo1dyt"]
 
+[ext_resource type="Script" uid="uid://yfsfxl4vhc42" path="res://Levels/TurnManager.gd" id="1_5ftdw"]
+[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Levels/ActionMenu.gd" id="1_tw1de"]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tq6vi"]
 
 [sub_resource type="Gradient" id="Gradient_2v34c"]
@@ -18,6 +21,7 @@ seamless = true
 seamless_blend_skirt = 0.336
 
 [node name="TurnManager" type="Node2D" unique_id=206241]
+script = ExtResource("1_5ftdw")
 
 [node name="Pointer" type="Node2D" parent="." unique_id=394376160]
 
@@ -25,3 +29,40 @@ seamless_blend_skirt = 0.336
 material = SubResource("ShaderMaterial_tq6vi")
 position = Vector2(64, 64)
 texture = SubResource("NoiseTexture2D_ao383")
+
+[node name="ActionMenu" type="VBoxContainer" parent="." unique_id=141154300]
+offset_left = 642.0
+offset_top = 443.0
+offset_right = 1023.0
+offset_bottom = 770.0
+script = ExtResource("1_tw1de")
+
+[node name="UnitName" type="TextEdit" parent="ActionMenu" unique_id=1434233805]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Action Menu"
+
+[node name="Move" type="Button" parent="ActionMenu" unique_id=12647808]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Move"
+
+[node name="Weapon" type="Button" parent="ActionMenu" unique_id=2022673583]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Use Weapon"
+
+[node name="Abilities" type="Button" parent="ActionMenu" unique_id=684535596]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Use Abilities"
+
+[node name="Items" type="Button" parent="ActionMenu" unique_id=501779470]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Use Weapon"
+
+[node name="Skip" type="Button" parent="ActionMenu" unique_id=1932324119]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Skip"

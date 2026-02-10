@@ -24,3 +24,6 @@ func _init():
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+
+func GetName() -> String:
+	return _name
