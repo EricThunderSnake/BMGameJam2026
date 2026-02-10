@@ -1,13 +1,13 @@
 class_name Unit
 extends Node2D
 
-signal player_ready
-
-var player_turn = true
+signal turn_started
+signal turn_finished
 
 @export var _name: String = "NoName"
 @export var _position: Vector2i =  Vector2i(0,0)
-static var _class: String = "Unit"
+enum Class {UNIT, BARBARIAN, FIGHTER}
+var _class: Class = Class.UNIT
 @export var _health: int = 10
 @export var _attack: int = 5
 @export var _armor_class: int = 3
@@ -22,12 +22,8 @@ func _init():
 	pass	
 	_health = 5 #experiment
 
-func TakeTurn():
-	if controller == Controller.PLAYER:
-		print(controller)
-		await player_ready
-	else:
-		pass
+func _ready():
+	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 
-func _input(event):
-	pass
+func GetName() -> String:
+	return _name

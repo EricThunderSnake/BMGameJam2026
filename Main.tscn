@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dx5anf3fh7slp"]
 
-[ext_resource type="Script" uid="uid://bocnrc1nt70x1" path="res://main_menu.gd" id="1_0f027"]
+[ext_resource type="Script" uid="uid://bocnrc1nt70x1" path="res://GameManager.gd" id="1_glv2v"]
 
 [node name="GameManager" type="Node2D" unique_id=1725989042]
-script = ExtResource("1_0f027")
+script = ExtResource("1_glv2v")
 
 [node name="Main Menu" type="Control" parent="." unique_id=264955007]
 layout_mode = 3
@@ -16,3 +16,4 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+text = "Play"
