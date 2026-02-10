@@ -26,13 +26,13 @@ var move_delay = 0.35
 var timer: Timer
 
 var processing_turn = false
-@onready var UnitManager = $"../UnitManager"
+@onready var MapManager = $"../MapManager"
 
 var unit_moving = false
 
 func _ready():
 	pointer.visible = false
-	UnitManager.turn_started.connect(TakeTurn)
+	MapManager.turn_started.connect(TakeTurn)
 	action_menu.move.pressed.connect(on_move)
 	action_menu.skip.pressed.connect(on_skip)
 	width = sprite.texture.get_width()
