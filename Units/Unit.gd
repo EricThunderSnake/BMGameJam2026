@@ -1,9 +1,6 @@
 class_name Unit
 extends CharacterBody2D
 
-signal s_turn_started
-signal turn_finished
-
 @export var _name: String = "NoName"
 @export var _position: Vector2i =  Vector2i(0,0)
 enum Class {UNIT, BARBARIAN, FIGHTER}

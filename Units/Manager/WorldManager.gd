@@ -1,6 +1,6 @@
 extends Node2D
 
-signal s_turn_started(units: Array[Unit], index: int)
+signal s_turn_started(unit: Unit)
 @onready var TurnManager = $"../TurnManager"
 @onready var units = $Units
 var unitArray: Array[Unit] = []
@@ -14,16 +14,13 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	var count = unitArray.size()
-	if new_unit_index == count:
-		new_unit_index = 0
-	var unit_index : int = new_unit_index
-	new_unit_index = 1
-	for i in range(unit_index,count):
-		print(unitArray[i].name)
-		s_turn_started.emit(unitArray, unit_index)
-		new_unit_index = unit_index + 1
+	for unit in unitArray:
+		print(unit.name)
+		s_turn_started.emit(unit)
 		await TurnManager.s_turn_ended
+
+		
+		
 
 func initialise_units():
 	print("camera: ",get_viewport().get_camera_2d())
@@ -42,6 +39,3 @@ func initialise_units():
 			#camera_attached = true
 		unitArray.append(unit)
 	assert(!unitArray.is_empty(), "Error: The Unit Manager must have at least one unit!")
-
-func f_turn_started(units: Array[Unit], index: int):
-	await s_turn_started

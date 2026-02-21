@@ -68,17 +68,15 @@ func _process(delta):
 		
 		timer.start()
 
-func TakeTurn(units: Array[Unit], index: int):
+func TakeTurn(unit:Unit):
 	
-	
-	active_unit = units[index]
+	active_unit = unit
 	print(active_unit.GetName())
 	action_menu.unit_name.text = active_unit.GetName() + "'s Turn"
 	action_menu.visible = true	
 	pointer.position = active_unit.position
 	get_tree().paused = true
 	PhysicsServer2D.set_active(true)
-
 
 func _input(event):
 	if !unit_moving:
