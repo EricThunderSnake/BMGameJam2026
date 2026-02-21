@@ -2,33 +2,24 @@
 
 [ext_resource type="Script" uid="uid://yfsfxl4vhc42" path="res://Levels/TurnManager.gd" id="1_5ftdw"]
 [ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Levels/ActionMenu.gd" id="1_tw1de"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tq6vi"]
-
-[sub_resource type="Gradient" id="Gradient_2v34c"]
-offsets = PackedFloat32Array(0, 0.17067307, 1)
-colors = PackedColorArray(0.8392157, 0, 1, 0.5019608, 0.8392157, 0, 1, 0.5019608, 0.8392157, 0, 1, 0.5019608)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_sv3a3"]
-frequency = 0.0925
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ao383"]
-width = 128
-height = 128
-noise = SubResource("FastNoiseLite_sv3a3")
-color_ramp = SubResource("Gradient_2v34c")
-seamless = true
-seamless_blend_skirt = 0.336
+[ext_resource type="PackedScene" uid="uid://cltclwp7xol4a" path="res://Levels/Pointer.tscn" id="2_65sq1"]
 
 [node name="TurnManager" type="Node2D" unique_id=206241]
 script = ExtResource("1_5ftdw")
 
-[node name="Pointer" type="Node2D" parent="." unique_id=394376160]
+[node name="Character Data" type="VBoxContainer" parent="." unique_id=1491685413]
+offset_left = 20.0
+offset_top = 680.0
+offset_right = 401.0
+offset_bottom = 980.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Pointer" unique_id=1619025076]
-material = SubResource("ShaderMaterial_tq6vi")
-position = Vector2(64, 64)
-texture = SubResource("NoiseTexture2D_ao383")
+[node name="UnitName" type="TextEdit" parent="Character Data" unique_id=127196412]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Action Menu"
+
+[node name="HP" type="ProgressBar" parent="Character Data" unique_id=2102596600]
+layout_mode = 2
 
 [node name="ActionMenu" type="VBoxContainer" parent="." unique_id=141154300]
 offset_left = 642.0
@@ -66,3 +57,5 @@ text = "Use Weapon"
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "Skip"
+
+[node name="Pointer" parent="." unique_id=862925563 instance=ExtResource("2_65sq1")]

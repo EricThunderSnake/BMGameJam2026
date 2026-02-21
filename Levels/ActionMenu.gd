@@ -6,4 +6,4 @@ extends VBoxContainer
 @onready var weapon : Button = $Weapon
 @onready var abilities : Button = $Abilities
 @onready var items : Button = $Items
-@onready var skip : Button = $"Skip"
+@onready var skip : Button = $Skip
