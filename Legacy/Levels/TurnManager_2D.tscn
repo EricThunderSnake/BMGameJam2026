@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://blxoxdblo1dyt"]
+
+[ext_resource type="Script" uid="uid://yfsfxl4vhc42" path="res://Legacy/Levels/TurnManager_2D.gd" id="1_5ftdw"]
+[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Legacy/Levels/ActionMenu.gd" id="1_tw1de"]
+[ext_resource type="PackedScene" uid="uid://cltclwp7xol4a" path="res://Legacy/Levels/Pointer_2D.tscn" id="2_65sq1"]
+
+[node name="TurnManager" type="Node2D" unique_id=1828600852]
+script = ExtResource("1_5ftdw")
+
+[node name="Character Data" type="VBoxContainer" parent="." unique_id=1491685413]
+offset_left = 20.0
+offset_top = 680.0
+offset_right = 401.0
+offset_bottom = 980.0
+
+[node name="UnitName" type="TextEdit" parent="Character Data" unique_id=127196412]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Action Menu"
+
+[node name="HP" type="ProgressBar" parent="Character Data" unique_id=2102596600]
+layout_mode = 2
+
+[node name="ActionMenu" type="VBoxContainer" parent="." unique_id=141154300]
+offset_left = 642.0
+offset_top = 443.0
+offset_right = 1023.0
+offset_bottom = 770.0
+script = ExtResource("1_tw1de")
+
+[node name="UnitName" type="TextEdit" parent="ActionMenu" unique_id=1434233805]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Action Menu"
+
+[node name="Move" type="Button" parent="ActionMenu" unique_id=12647808]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Move"
+
+[node name="Weapon" type="Button" parent="ActionMenu" unique_id=2022673583]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Use Weapon"
+
+[node name="Abilities" type="Button" parent="ActionMenu" unique_id=684535596]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Use Abilities"
+
+[node name="Items" type="Button" parent="ActionMenu" unique_id=501779470]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Use Weapon"
+
+[node name="Skip" type="Button" parent="ActionMenu" unique_id=1932324119]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "Skip"
+
+[node name="Pointer" parent="." unique_id=862925563 instance=ExtResource("2_65sq1")]

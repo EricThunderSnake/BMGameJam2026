@@ -13,7 +13,7 @@ config_version=5
 config/name="BMGameJam2026"
 run/main_scene="uid://dx5anf3fh7slp"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Legacy/icon.svg"
 
 [display]
 
@@ -23,9 +23,9 @@ window/size/viewport_height=768
 [file_customization]
 
 folder_colors={
-"res://Levels/": "blue",
-"res://Units/": "pink",
-"res://Units/ClassScripts/": "pink"
+"res://Legacy/Levels/": "blue",
+"res://Legacy/Units/": "pink",
+"res://Legacy/Units/Class/": "pink"
 }
 
 [input]

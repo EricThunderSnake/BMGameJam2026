@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b07vtgy2mnk27"]
+
+[ext_resource type="Script" uid="uid://bldfj4x5thrb5" path="res://Legacy/Levels/Pointer.gd" id="1_yq8fj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_765am"]
+transparency = 1
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(1, 0.41568628, 1, 0.44313726)
+point_size = 128.0
+stencil_color = Color(0.5520437, 0.4099808, 0.26019558, 1)
+stencil_outline_thickness = 0.361
+
+[sub_resource type="BoxMesh" id="BoxMesh_yq8fj"]
+material = SubResource("StandardMaterial3D_765am")
+size = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07m76"]
+size = Vector3(2, 2, 2)
+
+[node name="Pointer" type="Area3D" unique_id=1282922793]
+script = ExtResource("1_yq8fj")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=72002942]
+mesh = SubResource("BoxMesh_yq8fj")
+
+[node name="Collider" type="CollisionShape3D" parent="." unique_id=1904897421]
+visible = false
+shape = SubResource("BoxShape3D_07m76")

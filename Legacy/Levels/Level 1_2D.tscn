@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dwue0at0lqvfl"]
+
+[ext_resource type="Script" uid="uid://5y4mwse2i3g4" path="res://Legacy/Levels/Level_2D.gd" id="1_7y76k"]
+[ext_resource type="PackedScene" uid="uid://dr11vfy7v1j57" path="res://Legacy/Levels/WorldManager_2D.tscn" id="2_hcwm1"]
+[ext_resource type="PackedScene" uid="uid://blxoxdblo1dyt" path="res://Legacy/Levels/TurnManager_2D.tscn" id="3_oh3gr"]
+
+[node name="Level 1" type="Node2D" unique_id=1713846306]
+script = ExtResource("1_7y76k")
+
+[node name="WorldManager" parent="." unique_id=937494419 instance=ExtResource("2_hcwm1")]
+
+[node name="TurnManager" parent="." unique_id=206241 instance=ExtResource("3_oh3gr")]
