@@ -13,8 +13,6 @@ var _class: Class = Class.UNIT
 enum Controller {COMPUTER = 0, PLAYER = 1}
 @export var controller: Controller
 
-@onready var sprite: Sprite2D = $Sprite2D
-
 
 func _init():
 	pass	

@@ -26,5 +26,11 @@ script = ExtResource("1_yq8fj")
 mesh = SubResource("BoxMesh_yq8fj")
 
 [node name="Collider" type="CollisionShape3D" parent="." unique_id=1904897421]
-visible = false
 shape = SubResource("BoxShape3D_07m76")
+
+[node name="RayCast3D" type="RayCast3D" parent="Collider" unique_id=48547637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.13432312)
+target_position = Vector3(0, -3, 0)
+hit_from_inside = true
+debug_shape_custom_color = Color(2.705843, 3.7759013, 0, 1)
+debug_shape_thickness = 1

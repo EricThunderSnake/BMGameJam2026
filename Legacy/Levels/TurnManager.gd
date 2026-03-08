@@ -27,14 +27,14 @@ var move_delay = 0.35
 var timer: Timer
 
 var processing_turn = false
-@onready var WorldManager = $"../WorldManager"
+@onready var worldManager : WorldManager = $"../WorldManager"
 
 var unit_moving = false
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	pointer.visible = true
-#	WorldManager.s_turn_started.connect(TakeTurn)
+	worldManager.s_turn_started.connect(TakeTurn)
 	action_menu.move.pressed.connect(on_move)
 	action_menu.skip.pressed.connect(on_skip)
 	width = mesh.mesh.get_aabb().size.x
@@ -53,12 +53,13 @@ func _process(delta):
 	
 
 	var movement = width * Input.get_vector(Left, Right, Up, Down).sign()
-	#print(timer.time_left)
+
 	if !timer.is_stopped() && movement == Vector2.ZERO:
 		timer.stop()
+		
 	
 	if timer.is_stopped() && movement != Vector2.ZERO:
-		pointer.position += movement
+		pointer.position += Vector3(movement.x, 0, movement.y)
 		
 		last_pressed[Left] = true if movement.x < 0 else false
 		last_pressed[Right] = true if movement.x > 0 else false
@@ -68,14 +69,14 @@ func _process(delta):
 		timer.start()
 
 func TakeTurn(unit:Unit):
-	
+	assert(unit != null, "unit is Null")
 	active_unit = unit
 	print(active_unit.GetName())
 	action_menu.unit_name.text = active_unit.GetName() + "'s Turn"
 	action_menu.visible = true
 	pointer.position = active_unit.position
 	get_tree().paused = true
-	PhysicsServer2D.set_active(true)
+	PhysicsServer3D.set_active(true)
 
 func _input(event):
 	if !unit_moving:
@@ -105,10 +106,9 @@ func on_skip():
 	s_turn_ended.emit()
 	
 func is_valid_target_position(unit: Unit) -> bool:
-	var cell = WorldManager.tilemap.local_to_map(pointer.position)
-	var data = WorldManager.tilemap.get_cell_tile_data(cell)
-	
-	print(pointer.get_overlapping_areas())
+	var tile_position = pointer.raycast.get_collider().position
+
+	var tile_id : int = worldManager.gridmap.get_cell_item(pointer.position - Vector3(0, 2.5, 0))
 	
 	var present_units := pointer.get_overlapping_bodies()
 	if present_units.is_empty():
@@ -117,8 +117,8 @@ func is_valid_target_position(unit: Unit) -> bool:
 		print("You are already here.")
 	else:
 		return false
-
-	if data.get_custom_data("is_water"):
+		
+	if tile_id == 1: # water
 		return false
 	return true
 

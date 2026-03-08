@@ -21,7 +21,10 @@ script = ExtResource("1_7fx7l")
 [node name="TurnManager" parent="." unique_id=1009677029 instance=ExtResource("5_q4voj")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1552069528]
-transform = Transform3D(1, 0, 0, 0, 0.7356953, 0.6773126, 0, -0.6773126, 0.7356953, -1.081965, 10.767918, 12.894228)
+transform = Transform3D(1, 0, 0, 0, -0.011745691, 0.999931, 0, -0.999931, -0.011745691, -1.081965, 11.481567, -2.466259)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1828001194]
 environment = SubResource("Environment_q4voj")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1102102584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9312997, 0)

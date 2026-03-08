@@ -5,11 +5,13 @@ shading_mode = 2
 diffuse_mode = 2
 disable_ambient_light = true
 disable_specular_occlusion = true
-vertex_color_use_as_albedo = true
 albedo_color = Color(1, 1, 0.24313726, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_526f4"]
 material = SubResource("StandardMaterial3D_2btqr")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukd62"]
 size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpsjq"]
@@ -20,11 +22,28 @@ no_depth_test = true
 material = SubResource("StandardMaterial3D_hpsjq")
 size = Vector3(2, 2, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgxyj"]
+size = Vector3(2, 2, 2)
+
 [node name="Node3D" type="Node3D" unique_id=909739252]
 
 [node name="Grass" type="MeshInstance3D" parent="." unique_id=997614978]
+transform = Transform3D(0.999521, -0.02591826, 0.016913615, 0.026314285, 0.99937445, -0.023628814, -0.016290639, 0.02406255, 0.99957776, 0, 0, 0)
 mesh = SubResource("BoxMesh_526f4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass" unique_id=1137838253]
+disable_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D" unique_id=2037931325]
+transform = Transform3D(0.99999994, 1.7753337e-09, 0, 1.0186341e-09, 1, -1.8626451e-09, 1.8626451e-09, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_ukd62")
 
 [node name="Water" type="MeshInstance3D" parent="." unique_id=1228151125]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 mesh = SubResource("BoxMesh_7iigq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Water" unique_id=1444368448]
+disable_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" unique_id=979143056]
+shape = SubResource("BoxShape3D_fgxyj")

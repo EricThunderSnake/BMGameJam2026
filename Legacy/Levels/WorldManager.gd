@@ -1,3 +1,4 @@
+class_name WorldManager
 extends Node3D
 
 signal s_turn_started(unit: Unit)
