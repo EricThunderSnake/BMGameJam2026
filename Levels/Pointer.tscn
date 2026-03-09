@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b07vtgy2mnk27"]
+[gd_scene format=3 uid="uid://dkw58lhq78a8j"]
 
-[ext_resource type="Script" uid="uid://bldfj4x5thrb5" path="res://Legacy/Levels/Pointer.gd" id="1_yq8fj"]
+[ext_resource type="Script" uid="uid://0714koigbnw1" path="res://Levels/Pointer.gd" id="1_2v34c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_765am"]
 transparency = 1
@@ -20,7 +20,7 @@ size = Vector3(2.5, 2.5, 2.5)
 size = Vector3(2, 2, 2)
 
 [node name="Pointer" type="Area3D" unique_id=1282922793]
-script = ExtResource("1_yq8fj")
+script = ExtResource("1_2v34c")
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=72002942]
 mesh = SubResource("BoxMesh_yq8fj")

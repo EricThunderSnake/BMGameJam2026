@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var main_menu = $"Main Menu"
 @onready var play_button = $"Main Menu/PlayButton"
-const Level1Scene = "uid://coe030x2rwehv"
+const Level1Scene = "uid://dwue0at0lqvfl"
 var running = false
 
 var levelList: Array[Level]

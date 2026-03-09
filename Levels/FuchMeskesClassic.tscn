@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://8b04t4i3va01"]
+[gd_scene format=3 uid="uid://bglxdn3bbamb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2btqr"]
 shading_mode = 2
@@ -28,7 +28,6 @@ size = Vector3(2, 2, 2)
 [node name="Node3D" type="Node3D" unique_id=909739252]
 
 [node name="Grass" type="MeshInstance3D" parent="." unique_id=997614978]
-transform = Transform3D(0.999521, -0.02591826, 0.016913615, 0.026314285, 0.99937445, -0.023628814, -0.016290639, 0.02406255, 0.99957776, 0, 0, 0)
 mesh = SubResource("BoxMesh_526f4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Grass" unique_id=1137838253]

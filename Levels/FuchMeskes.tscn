@@ -1,25 +1,23 @@
-[gd_scene format=3 uid="uid://8b04t4i3va01"]
+[gd_scene format=3 uid="uid://c8dlyc3gimw6i"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2btqr"]
-shading_mode = 2
-diffuse_mode = 2
-disable_ambient_light = true
-disable_specular_occlusion = true
-albedo_color = Color(1, 1, 0.24313726, 1)
+[ext_resource type="Texture2D" uid="uid://btq0duu7c170c" path="res://tilesheet_complete_2X.png" id="1_526f4"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_526f4"]
-material = SubResource("StandardMaterial3D_2btqr")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oov7"]
+albedo_color = Color(0.2357066, 0.47677648, 0.19965231, 1)
+albedo_texture = ExtResource("1_526f4")
+
+[sub_resource type="BoxMesh" id="BoxMesh_35fk3"]
+material = SubResource("StandardMaterial3D_7oov7")
 size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ukd62"]
 size = Vector3(2, 2, 2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpsjq"]
-cull_mode = 1
-no_depth_test = true
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7iigq"]
+albedo_color = Color(0.08627451, 1, 1, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_7iigq"]
-material = SubResource("StandardMaterial3D_hpsjq")
+[sub_resource type="BoxMesh" id="BoxMesh_526f4"]
+material = SubResource("StandardMaterial3D_7iigq")
 size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fgxyj"]
@@ -28,8 +26,7 @@ size = Vector3(2, 2, 2)
 [node name="Node3D" type="Node3D" unique_id=909739252]
 
 [node name="Grass" type="MeshInstance3D" parent="." unique_id=997614978]
-transform = Transform3D(0.999521, -0.02591826, 0.016913615, 0.026314285, 0.99937445, -0.023628814, -0.016290639, 0.02406255, 0.99957776, 0, 0, 0)
-mesh = SubResource("BoxMesh_526f4")
+mesh = SubResource("BoxMesh_35fk3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Grass" unique_id=1137838253]
 disable_mode = 2
@@ -40,7 +37,7 @@ shape = SubResource("BoxShape3D_ukd62")
 
 [node name="Water" type="MeshInstance3D" parent="." unique_id=1228151125]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-mesh = SubResource("BoxMesh_7iigq")
+mesh = SubResource("BoxMesh_526f4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Water" unique_id=1444368448]
 disable_mode = 2

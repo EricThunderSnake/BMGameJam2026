@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="BMGameJam2026"
-run/main_scene="uid://dx5anf3fh7slp"
+run/main_scene="uid://dspdolkuuqdfm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Legacy/icon.svg"
 
 [display]
 

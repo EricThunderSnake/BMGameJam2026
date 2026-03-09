@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://byvrv7qk5ucwa"]
+[gd_scene format=3 uid="uid://cevch0jenkpiw"]
 
-[ext_resource type="Script" uid="uid://c3jafx4xhvcr5" path="res://Legacy/Levels/TurnManager.gd" id="1_b0p2d"]
-[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Legacy/Levels/ActionMenu.gd" id="2_ib5pe"]
-[ext_resource type="PackedScene" uid="uid://b07vtgy2mnk27" path="res://Legacy/Levels/Pointer.tscn" id="3_b0p2d"]
+[ext_resource type="Script" uid="uid://dxyy7i6h81j4e" path="res://Levels/TurnManager.gd" id="1_65sq1"]
+[ext_resource type="Script" uid="uid://cje6kgms8k0y6" path="res://Levels/ActionMenu.gd" id="2_qcpp6"]
+[ext_resource type="PackedScene" uid="uid://dkw58lhq78a8j" path="res://Levels/Pointer.tscn" id="3_lu3mq"]
 
 [node name="TurnManager" type="Node3D" unique_id=1009677029]
-script = ExtResource("1_b0p2d")
+script = ExtResource("1_65sq1")
 
 [node name="Character Data" type="VBoxContainer" parent="." unique_id=1491685413]
 offset_left = 20.0
@@ -26,7 +26,7 @@ offset_left = 642.0
 offset_top = 443.0
 offset_right = 1023.0
 offset_bottom = 770.0
-script = ExtResource("2_ib5pe")
+script = ExtResource("2_qcpp6")
 
 [node name="UnitName" type="TextEdit" parent="ActionMenu" unique_id=1434233805]
 custom_minimum_size = Vector2(100, 40)
@@ -58,5 +58,5 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "Skip"
 
-[node name="Pointer" parent="." unique_id=1282922793 instance=ExtResource("3_b0p2d")]
+[node name="Pointer" parent="." unique_id=1282922793 instance=ExtResource("3_lu3mq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, 5)

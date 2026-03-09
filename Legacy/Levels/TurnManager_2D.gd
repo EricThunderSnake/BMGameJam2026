@@ -1,4 +1,4 @@
-extends Node3D
+extends Node2D
 
 signal s_turn_ended
 signal unit_moved
@@ -34,7 +34,7 @@ var unit_moving = false
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	pointer.visible = true
-#	WorldManager.s_turn_started.connect(TakeTurn)
+	WorldManager.s_turn_started.connect(TakeTurn)
 	action_menu.move.pressed.connect(on_move)
 	action_menu.skip.pressed.connect(on_skip)
 	width = sprite.texture.get_width()
@@ -68,7 +68,6 @@ func _process(delta):
 		timer.start()
 
 func TakeTurn(unit:Unit2D):
-	
 	active_unit = unit
 	print(active_unit.GetName())
 	action_menu.unit_name.text = active_unit.GetName() + "'s Turn"

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://blxoxdblo1dyt"]
 
 [ext_resource type="Script" uid="uid://yfsfxl4vhc42" path="res://Legacy/Levels/TurnManager_2D.gd" id="1_5ftdw"]
-[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Legacy/Levels/ActionMenu.gd" id="1_tw1de"]
+[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Legacy/Levels/ActionMenu2D.gd" id="1_tw1de"]
 [ext_resource type="PackedScene" uid="uid://cltclwp7xol4a" path="res://Legacy/Levels/Pointer_2D.tscn" id="2_65sq1"]
 
 [node name="TurnManager" type="Node2D" unique_id=1828600852]

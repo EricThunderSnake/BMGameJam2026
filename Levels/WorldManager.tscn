@@ -1,18 +1,18 @@
-[gd_scene format=3 uid="uid://daf26axmn68pf"]
+[gd_scene format=3 uid="uid://8m5w00xp4bek"]
 
-[ext_resource type="Script" uid="uid://cspijkr4sy2r0" path="res://Legacy/Levels/WorldManager.gd" id="1_6jcac"]
-[ext_resource type="MeshLibrary" uid="uid://dri30a2m0xrvp" path="res://Legacy/Maps/FuchMeskes.meshlib" id="1_6wikp"]
-[ext_resource type="PackedScene" uid="uid://btxc8ugwsbpfx" path="res://Legacy/Units/Unit.tscn" id="2_7mu24"]
+[ext_resource type="Script" uid="uid://c13gfsfhk3n7o" path="res://Levels/WorldManager.gd" id="1_u4hq3"]
+[ext_resource type="MeshLibrary" uid="uid://byawe6x2i8g4l" path="res://Maps/FuchMeskes.meshlib" id="2_u4hq3"]
+[ext_resource type="PackedScene" uid="uid://by0e3yf858unm" path="res://Units/Unit.tscn" id="3_3362v"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8cvli"]
 
 [node name="WorldManager" type="Node3D" unique_id=1178354525]
-script = ExtResource("1_6jcac")
+script = ExtResource("1_u4hq3")
 
 [node name="Map" type="Node3D" parent="." unique_id=393221702]
 
 [node name="GridMap" type="GridMap" parent="Map" unique_id=1979594518]
-mesh_library = ExtResource("1_6wikp")
+mesh_library = ExtResource("2_u4hq3")
 physics_material = SubResource("PhysicsMaterial_8cvli")
 cell_octant_size = 16
 data = {
@@ -22,12 +22,14 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Units" type="Node3D" parent="." unique_id=1352718425]
 
-[node name="Barbarian" parent="Units" unique_id=1405739160 instance=ExtResource("2_7mu24")]
+[node name="Barbarian" parent="Units" unique_id=1405739160 instance=ExtResource("3_3362v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, 5)
 _name = "Barbara"
 controller = 1
+metadata/_custom_type_script = "uid://vursxvqhrs2c"
 
-[node name="Fighter" parent="Units" unique_id=1361032463 instance=ExtResource("2_7mu24")]
+[node name="Fighter" parent="Units" unique_id=873420173 instance=ExtResource("3_3362v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, 5)
 _name = "Fighter"
 controller = 1
+metadata/_custom_type_script = "uid://vursxvqhrs2c"

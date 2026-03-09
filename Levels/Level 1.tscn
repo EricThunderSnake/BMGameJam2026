@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://coe030x2rwehv"]
+[gd_scene format=3 uid="uid://bv06kv8xwrxd6"]
 
-[ext_resource type="Script" uid="uid://cbjafugg3d8hc" path="res://Legacy/Levels/Level.gd" id="1_7fx7l"]
-[ext_resource type="PackedScene" uid="uid://daf26axmn68pf" path="res://Legacy/Levels/WorldManager.tscn" id="3_7fx7l"]
-[ext_resource type="PackedScene" uid="uid://byvrv7qk5ucwa" path="res://Legacy/Levels/TurnManager.tscn" id="5_q4voj"]
+[ext_resource type="Script" uid="uid://bvl0cmanwiyax" path="res://Levels/Level.gd" id="1_wvewk"]
+[ext_resource type="PackedScene" uid="uid://8m5w00xp4bek" path="res://Levels/WorldManager.tscn" id="2_xtg75"]
+[ext_resource type="PackedScene" uid="uid://cevch0jenkpiw" path="res://Levels/TurnManager.tscn" id="3_ui7qv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7fx7l"]
 
@@ -14,11 +14,11 @@ background_mode = 2
 sky = SubResource("Sky_lqmbc")
 
 [node name="Level 1" type="Node3D" unique_id=1995268464]
-script = ExtResource("1_7fx7l")
+script = ExtResource("1_wvewk")
 
-[node name="WorldManager" parent="." unique_id=1178354525 instance=ExtResource("3_7fx7l")]
+[node name="WorldManager" parent="." unique_id=1178354525 instance=ExtResource("2_xtg75")]
 
-[node name="TurnManager" parent="." unique_id=1009677029 instance=ExtResource("5_q4voj")]
+[node name="TurnManager" parent="." unique_id=1009677029 instance=ExtResource("3_ui7qv")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1552069528]
 transform = Transform3D(1, 0, 0, 0, -0.011745691, 0.999931, 0, -0.999931, -0.011745691, -1.081965, 11.481567, -2.466259)
