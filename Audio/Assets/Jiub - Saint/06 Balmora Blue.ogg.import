@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgc3ecjpgwwi5"
+path="res://.godot/imported/06 Balmora Blue.ogg-a647b113738b66dc71ff32fd8e9e0112.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Assets/Jiub - Saint/06 Balmora Blue.ogg"
+dest_files=["res://.godot/imported/06 Balmora Blue.ogg-a647b113738b66dc71ff32fd8e9e0112.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -9,9 +9,9 @@ script = ExtResource("1_65sq1")
 
 [node name="Character Data" type="VBoxContainer" parent="." unique_id=1491685413]
 offset_left = 20.0
-offset_top = 680.0
+offset_top = 557.0
 offset_right = 401.0
-offset_bottom = 980.0
+offset_bottom = 857.0
 
 [node name="UnitName" type="TextEdit" parent="Character Data" unique_id=127196412]
 custom_minimum_size = Vector2(100, 40)
@@ -22,10 +22,10 @@ text = "Action Menu"
 layout_mode = 2
 
 [node name="ActionMenu" type="VBoxContainer" parent="." unique_id=141154300]
-offset_left = 642.0
-offset_top = 443.0
-offset_right = 1023.0
-offset_bottom = 770.0
+offset_left = 812.0
+offset_top = 343.0
+offset_right = 1120.0
+offset_bottom = 643.0
 script = ExtResource("2_qcpp6")
 
 [node name="UnitName" type="TextEdit" parent="ActionMenu" unique_id=1434233805]
@@ -59,4 +59,3 @@ layout_mode = 2
 text = "Skip"
 
 [node name="Pointer" parent="." unique_id=1282922793 instance=ExtResource("3_lu3mq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3.1, 5)

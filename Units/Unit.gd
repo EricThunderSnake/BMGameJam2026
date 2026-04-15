@@ -9,6 +9,8 @@ var _class: Class = Class.UNIT
 @export var _health: int = 10
 @export var _attack: int = 5
 @export var _armor_class: int = 3
+@onready var collider : CollisionShape3D = $CollisionShape3D
+@onready var mesh : MeshInstance3D = $Mesh
 
 enum Controller {COMPUTER = 0, PLAYER = 1}
 @export var controller: Controller

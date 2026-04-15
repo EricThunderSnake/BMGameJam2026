@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bvl0cmanwiyax" path="res://Levels/Level.gd" id="1_wvewk"]
 [ext_resource type="PackedScene" uid="uid://8m5w00xp4bek" path="res://Levels/WorldManager.tscn" id="2_xtg75"]
 [ext_resource type="PackedScene" uid="uid://cevch0jenkpiw" path="res://Levels/TurnManager.tscn" id="3_ui7qv"]
+[ext_resource type="Script" uid="uid://c18ehlwk76fjm" path="res://Audio/music_auto_trigger.gd" id="4_ui7qv"]
+[ext_resource type="AudioStream" uid="uid://dgoqmgkkrx3ar" path="res://Audio/Assets/Jiub - Saint/02 Filthy Rich.ogg" id="5_ui7qv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7fx7l"]
 
@@ -19,12 +21,21 @@ script = ExtResource("1_wvewk")
 [node name="WorldManager" parent="." unique_id=1178354525 instance=ExtResource("2_xtg75")]
 
 [node name="TurnManager" parent="." unique_id=1009677029 instance=ExtResource("3_ui7qv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1552069528]
-transform = Transform3D(1, 0, 0, 0, -0.011745691, 0.999931, 0, -0.999931, -0.011745691, -1.081965, 11.481567, -2.466259)
+transform = Transform3D(0.99994206, -0.0052612075, 0.00939572, 7.643442e-11, 0.87252176, 0.48857534, -0.010768467, -0.48854703, 0.87247115, -1.081965, 21.11561, 30.060942)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1828001194]
 environment = SubResource("Environment_q4voj")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1102102584]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9312997, 0)
+[node name="Node3D" type="Node3D" parent="." unique_id=769259722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="MusicAutoTrigger" type="Node" parent="." unique_id=1617131224]
+script = ExtResource("4_ui7qv")
+track = ExtResource("5_ui7qv")
+metadata/_custom_type_script = "uid://c18ehlwk76fjm"
+
+[editable path="WorldManager"]
+[editable path="TurnManager"]

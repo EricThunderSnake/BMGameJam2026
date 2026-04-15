@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dstdporgrypxf"]
+
+[ext_resource type="Script" uid="uid://bcu7l35r1roo7" path="res://AudioTests/audio_test.gd" id="1_yr8aj"]
+
+[node name="AudioTest" type="Node2D" unique_id=1190380398]
+script = ExtResource("1_yr8aj")
+
+[node name="Button" type="Button" parent="." unique_id=963808184]
+offset_right = 329.0
+offset_bottom = 82.0
+text = "Play Audio"
+
+[node name="Audio" type="AudioStreamPlayer2D" parent="." unique_id=1934434638]

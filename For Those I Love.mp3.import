@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coba87omg15kr"
+path="res://.godot/imported/For Those I Love.mp3-d8d454b4d165da01ee5325ffd25154dc.mp3str"
+
+[deps]
+
+source_file="res://For Those I Love.mp3"
+dest_files=["res://.godot/imported/For Those I Love.mp3-d8d454b4d165da01ee5325ffd25154dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=120.0
+beat_count=0
+bar_beats=4

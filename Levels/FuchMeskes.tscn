@@ -32,15 +32,17 @@ mesh = SubResource("BoxMesh_35fk3")
 disable_mode = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D" unique_id=2037931325]
+process_mode = 3
 transform = Transform3D(0.99999994, 1.7753337e-09, 0, 1.0186341e-09, 1, -1.8626451e-09, 1.8626451e-09, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_ukd62")
 
 [node name="Water" type="MeshInstance3D" parent="." unique_id=1228151125]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 mesh = SubResource("BoxMesh_526f4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Water" unique_id=1444368448]
 disable_mode = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" unique_id=979143056]
+process_mode = 3
 shape = SubResource("BoxShape3D_fgxyj")

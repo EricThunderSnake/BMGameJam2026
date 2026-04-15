@@ -53,7 +53,6 @@ func _process(delta):
 	
 
 	var movement = width * Input.get_vector(Left, Right, Up, Down).sign()
-
 	if !timer.is_stopped() && movement == Vector2.ZERO:
 		timer.stop()
 		
@@ -71,10 +70,9 @@ func _process(delta):
 func TakeTurn(unit:Unit):
 	assert(unit != null, "unit is Null")
 	active_unit = unit
-	print(active_unit.GetName())
 	action_menu.unit_name.text = active_unit.GetName() + "'s Turn"
 	action_menu.visible = true
-	pointer.position = active_unit.position
+	pointer.position = active_unit.position - Vector3(0, 2.2, 0)
 	get_tree().paused = true
 	PhysicsServer3D.set_active(true)
 
@@ -85,7 +83,7 @@ func _input(event):
 		finalise_movement(active_unit)
 	if event.is_action_pressed("ui_cancel"):
 		pointer.visible = false
-		pointer.position = active_unit.position
+		#pointer.position = active_unit.position
 		unit_moving = false
 		action_menu.visible = true
 		
@@ -94,9 +92,6 @@ func on_move():
 	unit_moving = true
 	pointer.visible = true
 	action_menu.visible = false
-	
-	
-	
 
 func on_skip():
 	action_menu.visible = false
@@ -106,13 +101,15 @@ func on_skip():
 	s_turn_ended.emit()
 	
 func is_valid_target_position(unit: Unit) -> bool:
-	var tile_position = pointer.raycast.get_collider().position
 
-	var tile_id : int = worldManager.gridmap.get_cell_item(pointer.position - Vector3(0, 2.5, 0))
-	
+	var tile_position = pointer.raycast.get_collision_point() - Vector3(0,1,0)
+	print(tile_position)
+	var tile_id : int = worldManager.gridmap.get_cell_item(tile_position / 2 )
+	print(tile_id)
 	var present_units := pointer.get_overlapping_bodies()
-	if present_units.is_empty():
-		pass
+	print(present_units)
+	if present_units.size() <= 1: # present_units will always contain the gridmap
+		pass                     # need to adjust physics layers so this doesn't happeb
 	elif present_units.has(active_unit):
 		print("You are already here.")
 	else:
@@ -129,7 +126,7 @@ func finalise_movement(unit: Unit):
 		print("the unit cannot get here")
 		return
 	pointer.visible = false
-	unit.position = pointer.position
+	unit.position = pointer.position + Vector3(0, 2.2, 0)
 	action_menu.move.visible = false
 	unit_moving = false
 	action_menu.visible = true

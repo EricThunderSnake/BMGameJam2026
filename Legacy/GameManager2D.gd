@@ -9,6 +9,7 @@ var levelList: Array[Level]
 
 func _ready():
 	play_button.connect("pressed", play_game)
+	Audio.setup_button_audio(self)
 
 	
 	

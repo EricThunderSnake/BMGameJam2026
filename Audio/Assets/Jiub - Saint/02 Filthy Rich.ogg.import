@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgoqmgkkrx3ar"
+path="res://.godot/imported/02 Filthy Rich.ogg-2055cf91d60c41ef7f30dd63952501ca.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Assets/Jiub - Saint/02 Filthy Rich.ogg"
+dest_files=["res://.godot/imported/02 Filthy Rich.ogg-2055cf91d60c41ef7f30dd63952501ca.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

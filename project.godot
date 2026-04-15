@@ -14,10 +14,13 @@ config/name="BMGameJam2026"
 run/main_scene="uid://dspdolkuuqdfm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
-[display]
+[audio]
 
-window/size/viewport_width=1024
-window/size/viewport_height=768
+buses/default_bus_layout="uid://dljht5gyqs5k0"
+
+[autoload]
+
+Audio="*uid://bx2vb06wx6ou1"
 
 [file_customization]
 
