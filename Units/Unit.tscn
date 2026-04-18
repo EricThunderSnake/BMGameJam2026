@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://by0e3yf858unm"]
+
+[ext_resource type="Script" uid="uid://vursxvqhrs2c" path="res://Units/Unit.gd" id="1_0r52t"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7wytu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rqvx"]
+cull_mode = 1
+shading_mode = 0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_d1yal"]
+material = SubResource("StandardMaterial3D_5rqvx")
+radius = 0.6
+height = 2.2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_amrl3"]
+
+[node name="Unit" type="CharacterBody3D" unique_id=1405739160]
+script = ExtResource("1_0r52t")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1963790124]
+mesh = SubResource("CapsuleMesh_7wytu")
+
+[node name="Outline" type="MeshInstance3D" parent="Mesh" unique_id=1929093548]
+mesh = SubResource("CapsuleMesh_d1yal")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1909996514]
+visible = false
+shape = SubResource("CapsuleShape3D_amrl3")

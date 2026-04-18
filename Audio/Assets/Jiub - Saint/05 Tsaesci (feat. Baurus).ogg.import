@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bx6qfybpsrymj"
+path="res://.godot/imported/05 Tsaesci (feat. Baurus).ogg-893599c7ac81c080a4297b72ba65c65c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Assets/Jiub - Saint/05 Tsaesci (feat. Baurus).ogg"
+dest_files=["res://.godot/imported/05 Tsaesci (feat. Baurus).ogg-893599c7ac81c080a4297b72ba65c65c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

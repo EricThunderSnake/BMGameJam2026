@@ -1,6 +1,8 @@
-[gd_scene format=3 uid="uid://dx5anf3fh7slp"]
+[gd_scene format=3 uid="uid://dspdolkuuqdfm"]
 
-[ext_resource type="Script" uid="uid://bocnrc1nt70x1" path="res://GameManager.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://cyaut0wm8knkb" path="res://GameManager.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://c18ehlwk76fjm" path="res://Audio/music_auto_trigger.gd" id="2_r0du0"]
+[ext_resource type="AudioStream" uid="uid://c5xvp0kk0h4cc" path="res://Audio/Assets/Jiub - Saint/01 Elsweyr Palace.ogg" id="3_r0du0"]
 
 [node name="GameManager" type="Node2D" unique_id=1725989042]
 script = ExtResource("1_glv2v")
@@ -17,3 +19,8 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Play"
+
+[node name="MusicAutoTrigger" type="Node" parent="." unique_id=248733024]
+script = ExtResource("2_r0du0")
+track = ExtResource("3_r0du0")
+metadata/_custom_type_script = "uid://c18ehlwk76fjm"

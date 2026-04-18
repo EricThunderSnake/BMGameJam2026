@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dx5anf3fh7slp"]
+
+[ext_resource type="Script" uid="uid://bocnrc1nt70x1" path="res://GameManager.gd" id="1_glv2v"]
+
+[node name="GameManager" type="Node2D" unique_id=1725989042]
+script = ExtResource("1_glv2v")
+
+[node name="Main Menu" type="Control" parent="." unique_id=264955007]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="Main Menu" unique_id=1445643327]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Play"

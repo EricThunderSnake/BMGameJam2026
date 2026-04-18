@@ -1,41 +1,32 @@
-[gd_scene format=3 uid="uid://blxoxdblo1dyt"]
+[gd_scene format=3 uid="uid://cevch0jenkpiw"]
 
-[ext_resource type="Script" uid="uid://yfsfxl4vhc42" path="res://Levels/TurnManager.gd" id="1_5ftdw"]
-[ext_resource type="Script" uid="uid://cx8luux5vv1i3" path="res://Levels/ActionMenu.gd" id="1_tw1de"]
+[ext_resource type="Script" uid="uid://dxyy7i6h81j4e" path="res://Levels/TurnManager.gd" id="1_65sq1"]
+[ext_resource type="Script" uid="uid://cje6kgms8k0y6" path="res://Levels/ActionMenu.gd" id="2_qcpp6"]
+[ext_resource type="PackedScene" uid="uid://dkw58lhq78a8j" path="res://Levels/Pointer.tscn" id="3_lu3mq"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tq6vi"]
+[node name="TurnManager" type="Node3D" unique_id=1009677029]
+script = ExtResource("1_65sq1")
 
-[sub_resource type="Gradient" id="Gradient_2v34c"]
-offsets = PackedFloat32Array(0, 0.17067307, 1)
-colors = PackedColorArray(0.8392157, 0, 1, 0.5019608, 0.8392157, 0, 1, 0.5019608, 0.8392157, 0, 1, 0.5019608)
+[node name="Character Data" type="VBoxContainer" parent="." unique_id=1491685413]
+offset_left = 20.0
+offset_top = 557.0
+offset_right = 401.0
+offset_bottom = 857.0
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_sv3a3"]
-frequency = 0.0925
+[node name="UnitName" type="TextEdit" parent="Character Data" unique_id=127196412]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Action Menu"
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ao383"]
-width = 128
-height = 128
-noise = SubResource("FastNoiseLite_sv3a3")
-color_ramp = SubResource("Gradient_2v34c")
-seamless = true
-seamless_blend_skirt = 0.336
-
-[node name="TurnManager" type="Node2D" unique_id=206241]
-script = ExtResource("1_5ftdw")
-
-[node name="Pointer" type="Node2D" parent="." unique_id=394376160]
-
-[node name="Sprite2D" type="Sprite2D" parent="Pointer" unique_id=1619025076]
-material = SubResource("ShaderMaterial_tq6vi")
-position = Vector2(64, 64)
-texture = SubResource("NoiseTexture2D_ao383")
+[node name="HP" type="ProgressBar" parent="Character Data" unique_id=2102596600]
+layout_mode = 2
 
 [node name="ActionMenu" type="VBoxContainer" parent="." unique_id=141154300]
-offset_left = 642.0
-offset_top = 443.0
-offset_right = 1023.0
-offset_bottom = 770.0
-script = ExtResource("1_tw1de")
+offset_left = 812.0
+offset_top = 343.0
+offset_right = 1120.0
+offset_bottom = 643.0
+script = ExtResource("2_qcpp6")
 
 [node name="UnitName" type="TextEdit" parent="ActionMenu" unique_id=1434233805]
 custom_minimum_size = Vector2(100, 40)
@@ -66,3 +57,5 @@ text = "Use Weapon"
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "Skip"
+
+[node name="Pointer" parent="." unique_id=1282922793 instance=ExtResource("3_lu3mq")]

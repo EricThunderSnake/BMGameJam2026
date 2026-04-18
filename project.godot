@@ -11,21 +11,23 @@ config_version=5
 [application]
 
 config/name="BMGameJam2026"
-run/main_scene="uid://dx5anf3fh7slp"
+run/main_scene="uid://dspdolkuuqdfm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
-[display]
+[audio]
 
-window/size/viewport_width=1024
-window/size/viewport_height=768
+buses/default_bus_layout="uid://dljht5gyqs5k0"
+
+[autoload]
+
+Audio="*uid://bx2vb06wx6ou1"
 
 [file_customization]
 
 folder_colors={
-"res://Levels/": "blue",
-"res://Units/": "pink",
-"res://Units/ClassScripts/": "pink"
+"res://Legacy/Levels/": "blue",
+"res://Legacy/Units/": "pink",
+"res://Legacy/Units/Class/": "pink"
 }
 
 [input]

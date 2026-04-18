@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ntbf1nludhtj"
+path="res://.godot/imported/03 Mazed Band (feat. Beyte Fyr).ogg-fe68f7d0b237fcc8cebd6bcd655b1975.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Assets/Jiub - Saint/03 Mazed Band (feat. Beyte Fyr).ogg"
+dest_files=["res://.godot/imported/03 Mazed Band (feat. Beyte Fyr).ogg-fe68f7d0b237fcc8cebd6bcd655b1975.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

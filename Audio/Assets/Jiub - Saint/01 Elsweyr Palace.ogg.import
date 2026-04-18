@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5xvp0kk0h4cc"
+path="res://.godot/imported/01 Elsweyr Palace.ogg-50fbb904f702f6ab378c63ee9b86fcb1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Assets/Jiub - Saint/01 Elsweyr Palace.ogg"
+dest_files=["res://.godot/imported/01 Elsweyr Palace.ogg-50fbb904f702f6ab378c63ee9b86fcb1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

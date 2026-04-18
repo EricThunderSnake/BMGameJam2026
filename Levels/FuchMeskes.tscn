@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c8dlyc3gimw6i"]
+
+[ext_resource type="Texture2D" uid="uid://btq0duu7c170c" path="res://tilesheet_complete_2X.png" id="1_526f4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oov7"]
+albedo_color = Color(0.2357066, 0.47677648, 0.19965231, 1)
+albedo_texture = ExtResource("1_526f4")
+
+[sub_resource type="BoxMesh" id="BoxMesh_35fk3"]
+material = SubResource("StandardMaterial3D_7oov7")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ukd62"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7iigq"]
+albedo_color = Color(0.08627451, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_526f4"]
+material = SubResource("StandardMaterial3D_7iigq")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgxyj"]
+size = Vector3(2, 2, 2)
+
+[node name="Node3D" type="Node3D" unique_id=909739252]
+
+[node name="Grass" type="MeshInstance3D" parent="." unique_id=997614978]
+mesh = SubResource("BoxMesh_35fk3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass" unique_id=1137838253]
+disable_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D" unique_id=2037931325]
+process_mode = 3
+transform = Transform3D(0.99999994, 1.7753337e-09, 0, 1.0186341e-09, 1, -1.8626451e-09, 1.8626451e-09, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_ukd62")
+
+[node name="Water" type="MeshInstance3D" parent="." unique_id=1228151125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = SubResource("BoxMesh_526f4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Water" unique_id=1444368448]
+disable_mode = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water/StaticBody3D" unique_id=979143056]
+process_mode = 3
+shape = SubResource("BoxShape3D_fgxyj")
