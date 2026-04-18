@@ -20,14 +20,6 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "Play"
 
-[node name="PlayButton2" type="Button" parent="Main Menu" unique_id=638460937]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_top = 108.0
-offset_right = 100.0
-offset_bottom = 208.0
-text = "Play"
-
 [node name="MusicAutoTrigger" type="Node" parent="." unique_id=248733024]
 script = ExtResource("2_r0du0")
 track = ExtResource("3_r0du0")
